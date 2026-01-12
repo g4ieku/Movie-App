@@ -75,7 +75,8 @@ body {
 
 img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
 }
 
 .container {
@@ -87,9 +88,9 @@ img {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 1rem;
   justify-content: space-around;
   align-items: center;
-  gap: 1.5rem;
 }
 
 /* ===== HEADER ===== */
@@ -118,6 +119,7 @@ header {
 
 /* ===== MAIN ===== */
 .movie-card {
+  height: 100%;
   background: var(--bg-secondary);
   padding: 1.2rem 0.75rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55),
@@ -188,7 +190,7 @@ header {
   background: var(--overview-bg);
   color: var(--overview-text);
   opacity: 0;
-  transform: translateY(14px);
+  transform: translateY(10px);
   transition: opacity 0.5s ease, transform 0.5s ease-in;
 }
 

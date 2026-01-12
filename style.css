@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  /* ===== Backgrounds ====== */
+  --bg-primary: #05060a; /* Deep Space Black */
+  --bg-secondary: #0b1020; /* Nebula Dark Blue */
+  --bg-tertiary: #11162a; /* Elevated surfaces */
+
+  /* ===== Neon Accents ===== */
+  --accent-primary: #00f5ff; /* Neon Cyan */
+  --accent-secondary: #7b5cff; /* Electric Purple */
+  --accent-tertiary: #ff2ec4; /* Neon Magenta */
+
+  /* ===== Text Colors ===== */
+  --text-primary: #e8ecf1; /* Frost White */
+  --text-secondary: #9aa4bf; /* Cool Gray Blue */
+  --text-muted: #6b7391;
+
+  /* ===== Borders & Lines ===== */
+  --border-primary: #1e2a4a;
+  --border-accent: #00f5ff;
+
+  /* ===== Glow Effects ===== */
+  --glow-cyan: 0 0 12px rgba(0, 245, 255, 0.6);
+  --glow-purple: 0 0 14px rgba(123, 92, 255, 0.7);
+  --glow-magenta: 0 0 14px rgba(255, 46, 196, 0.7);
+
+  /* ===== Gradients ===== */
+  --gradient-neon: linear-gradient(135deg, #00f5ff, #7b5cff, #ff2ec4);
+
+  /* ===== Status Colors ===== */
+  --success: #00ff9c;
+  --warning: #ffd166;
+  --error: #ff4c4c;
+
+  /* ===== UI Effects ===== */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.35s ease-in-out;
+}
+
+body {
+  font-family: "Roboto", "Courier New", Courier, monospace;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+img {
+  width: 250px;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem;
+}

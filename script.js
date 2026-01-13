@@ -33,7 +33,9 @@ function displayMovies(movies) {
         />
         <div class="movie-info">
           <h3>${movie.original_title}</h3>
-          <span class="good">${movie.vote_average}</span>
+          <span class="${getClassByRate(
+            Number(movie.vote_average.toFixed(2))
+          )}">${Number(movie.vote_average.toFixed(2))}</span>
         </div>
         <div class="overview">
           <h3>Overview</h3>
@@ -47,6 +49,19 @@ function displayMovies(movies) {
 
     main.appendChild(div);
   });
+}
+
+function getClassByRate(vote) {
+  switch (true) {
+    case vote >= 8:
+      return "good";
+      break;
+    case vote >= 5:
+      return "average";
+      break;
+    default:
+      return "bad";
+  }
 }
 
 form.addEventListener("submit", (event) => {

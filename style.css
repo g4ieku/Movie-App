@@ -87,21 +87,24 @@ img {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 325px));
   gap: 1rem;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 /* ===== HEADER ===== */
 header {
   padding: 0.5rem 1rem;
+}
+
+#form {
   display: flex;
   justify-content: flex-end;
 }
 
 .search {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1.75rem;
   background: transparent;
   border: 2px solid var(--border-accent);
   border-radius: 3px;
